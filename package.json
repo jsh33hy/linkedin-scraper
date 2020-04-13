@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.0.0",
-    "scrapedin": "^1.0.12"
+    "scrapedin": "^1.0.13"
   }
 }
