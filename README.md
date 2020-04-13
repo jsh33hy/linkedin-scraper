@@ -1,6 +1,8 @@
 # LinkedIn Scraper
 
-Scrape Linkedin profiles and search through experience descriptions/titles for specified keywords
+Uses [scrapedin](https://github.com/linkedtales/scrapedin) and [puppeteer](https://github.com/puppeteer/puppeteer) to search through a given list of LinkedIn profiles for specified keywords.
+
+![IMG](./static/terminal-ss.png)
 
 ## Quickstart
 
@@ -17,7 +19,7 @@ cd <project_name>
 
 #### Setup config
 
-Edit [config](./config/config.json)
+Edit the [config file](./config/config.json) to include your credentials, keywords to match, and LinkedIn profile urls
 ```json
     // login credentials
     "credentials":{
@@ -43,6 +45,19 @@ Edit [config](./config/config.json)
 ```sh
 npm install // NOTE: puppeteer package is > 100 MB
 npm start
+```
+
+## Using Docker
+```sh
+git clone --depth=1 https://github.com/jsh33hy/linkedin-scraper.git <project_name>
+cd <project_name>
+## build image
+docker build --tag js/linkedin-scraper .
+## create container
+docker create --name js-linkedin-scraper --mount type=bind,source="$(pwd)"/config,target=/var/workdir/config --tty js/linkedin-scraper
+## start container
+docker start js-linkedin-scraper --attach
+## Note: you can make changes to the config.json file and then restart an existing container
 ```
 
 ## Todo
