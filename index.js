@@ -60,7 +60,7 @@ const start = async function(a, b) {
             console.log(e);
         }
     }
-    console.log("Done scraping")
+    console.log("Done scraping");
 }
   // Call start
 start();

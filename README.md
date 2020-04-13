@@ -1,5 +1,7 @@
 # LinkedIn Scraper
 
+Scrape Linkedin profiles and search through experience descriptions/titles for specified keywords
+
 ## Quickstart
 
 #### Requirements
