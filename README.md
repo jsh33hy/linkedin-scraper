@@ -44,3 +44,6 @@ Edit [config](./config/config.json)
 npm install // NOTE: puppeteer package is > 100 MB
 npm start
 ```
+
+## Todo
+- Add support for cookies auth instead of credentials
