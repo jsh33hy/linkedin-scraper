@@ -1,0 +1,10 @@
+.git/
+node_modules/
+.idea/
+.vscode/
+npm-debug.log
+.env
+tmp/
+temp/
+dist/
+test/
