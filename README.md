@@ -22,6 +22,8 @@ Edit [config](./config/config.json)
         "email": "{YOUR-EMAIL}",
         "password": "{YOUR-PASSWORD}"
     },
+    //  launch in headless mode (no browser popup)
+    "headless": true,
     //  keywords to search for
     "keywords":[
         "Android",
