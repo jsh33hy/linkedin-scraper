@@ -1,8 +1,8 @@
 {
     "headless": true,
     "credentials":{
-        "email": "{YOUR-EMAIL}",
-        "password": "{YOUR-PASSWORD}"
+        "email": "{INSERT-EMAIL}",
+        "password": "{INSERT-PASSWORD}"
     },
     "keywords":[
         "Node",
@@ -10,7 +10,7 @@
     ],
     "urls": [
         "https://www.linkedin.com/in/cedrix/",
-        "https://www.linkedin.com/in/jake-carr-38b0881a6/",
+        "https://www.linkedin.com/in/brandon-macpherson/",
         "https://www.linkedin.com/in/jake-carr-38b0881a6/",
         "https://www.linkedin.com/in/mobilebho/",
         "https://www.linkedin.com/in/patricktibbetts/",
@@ -27,7 +27,6 @@
         "https://www.linkedin.com/in/kate-ruh-427567a2/",
         "https://www.linkedin.com/in/celestehaselton/",
         "https://www.linkedin.com/in/alexandra-zajaczkowski/",
-        "https://www.linkedin.com/in/brandon-macpherson/",
         "https://www.linkedin.com/in/tereshko/",
         "https://www.linkedin.com/in/tereshko/",
         "https://www.linkedin.com/in/aaron-culp-b6616892/",

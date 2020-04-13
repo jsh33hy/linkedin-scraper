@@ -14,8 +14,30 @@ function parseProfile(profile){
     let containsKeyWord = false;
     let keywordMatches = {};
 
-    profile.positions.forEach(position =>{
-        keywords.forEach(keyword=>{
+
+    keywords.forEach(keyword=>{
+        //  check summary
+        if(profile.summary && profile.summary.toUpperCase().indexOf(keyword.toUpperCase()) > -1){
+            if(VERBOSE){
+                console.log("SUMMARY MATCH "+keyword);
+                console.log(profile.summary);
+            }
+            containsKeyWord = true;
+            keywordMatches[keyword] = true;
+        }   
+        
+        //  check alternative summary
+        if(profile.profileAlternative && profile.profileAlternative.summary && profile.profileAlternative.summary.toUpperCase().indexOf(keyword.toUpperCase()) > -1){
+            if(VERBOSE){
+                console.log("ALTERNATIVE SUMMARY MATCH "+keyword);
+                console.log(profile.profileAlternative.summary);
+            }
+            containsKeyWord = true;
+            keywordMatches[keyword] = true;
+        }
+
+        //  check each position
+        profile.positions.forEach(position =>{
             if(position.title && position.title.toUpperCase().indexOf(keyword.toUpperCase()) > -1){
                 if(VERBOSE){
                     console.log("TITLE MATCH "+keyword);
@@ -33,7 +55,20 @@ function parseProfile(profile){
                 containsKeyWord = true;
                 keywordMatches[keyword] = true;
             }
+
         });
+
+        //  check each skill
+        profile.skills.forEach(skill =>{
+            if(skill.title && skill.title.toUpperCase().indexOf(keyword.toUpperCase()) > -1){
+                if(VERBOSE){
+                    console.log("SKILL MATCH "+keyword);
+                    console.log(skill.title);
+                }
+                containsKeyWord = true;
+                keywordMatches[keyword] = true;
+            }
+        })
     });
 
     return {keywordMatches, containsKeyWord};
