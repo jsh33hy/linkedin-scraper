@@ -49,7 +49,7 @@ const start = async function(a, b) {
     for(i in CONFIG.urls){
         let url = CONFIG.urls[i];
         try{
-            console.log(">> scrapping "+url);
+            console.log(">> scraping "+url);
             result = await scrapePage(profileScraper, url);
             if(result.containsKeyWord){
                 console.log(chalk.bold.green("FOUND MATCH (%s): %s"), Object.keys(result.keywordMatches).join(', '), url);
@@ -60,6 +60,7 @@ const start = async function(a, b) {
             console.log(e);
         }
     }
+    console.log("Done scraping")
 }
   // Call start
 start();
