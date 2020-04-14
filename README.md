@@ -61,4 +61,5 @@ docker start js-linkedin-scraper --attach
 ```
 
 ## Todo
+- Run multiple URL requests in parallel
 - Add support for cookies auth instead of credentials

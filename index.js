@@ -79,7 +79,7 @@ const scrapePage = async function(scraper, url){
     return parseProfile(profile);
 }
 
-const start = async function(a, b) {
+const start = async function() {
     const profileScraper = await scrapedin(options);
     for(i in CONFIG.urls){
         let url = CONFIG.urls[i];
